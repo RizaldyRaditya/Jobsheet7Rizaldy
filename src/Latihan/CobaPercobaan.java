@@ -55,6 +55,25 @@ public class CobaPercobaan {
             System.out.println("nilai a sama dengan 6");
         }else {
             System.out.println("nilai a lebih dari 6");
+            
+            System.out.println("\nNested IF");
+            if (a < 7) {
+                System.out.println("nilai a kurang dari 7");
+                if (a > 2)
+                    System.out.println("nilai a lebih dari 2");
+                if (a < 4)
+                    System.out.println("nilai a kurang dari 4");
+                
+                System.out.println("\nSWITCH..CASE");
+                switch(a) {
+                    case 1: System.out.println("nilai a => 1"); break;
+                    case 2: System.out.println("nilai a => 2"); break;
+                    case 3:
+                    case 4: System.out.println("nilai a => 3 atau 4"); break;
+                    case 5: System.out.println("nilai a => 5"); break;
+                    default : System.out.println("nilai a bukan antara 1 - 5");
+                }
+            }
         }
         }
     }
