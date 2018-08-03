@@ -24,8 +24,8 @@ public class SaranBahan2Resep {
         System.out.println("2. Telur");
         System.out.println("Masukkan nomor pilihan anda : ");
         int bahan1 = scanner.nextInt();
-        if(bahan1 == 1 | | bahan1 == 2)
-        {
+        if(bahan1 != 1 && bahan1 != 2)
+            System.out.println("Mohon maad, Pilihan tidak ditemukan, "+ "tidak dapat memberikan saran resep");else {
             System.out.println("Bahan kedua :");
             if(bahan1 == 1) {
                 System.out.println("1. Susu");
@@ -38,11 +38,26 @@ public class SaranBahan2Resep {
             }
             System.out.println("Masukkan no pilihan anda :");
             int bahan2 = scanner.nextInt();
+        }
+        int bahan2 = scanner.nextInt();
+        if(bahan2 >= 1 && bahan2 <= 3)
+        {
+            if(bahan1==1)
+                switch(bahan2)
+                {
+                    case 1: System.out.println("Anda dapat membuat milk shake banana"); break;
+                    case 2: System.out.println("Anda dapat membuat pisang goreng"); break;
+                    case 3: System.out.println("Anda dapat membuat pisang rebus"); break;
+                }
+            else
+                switch(bahan2)
+                {
+                    case 1: System.out.println("Anda dapat membuat telur mata sapi"); break;
+                    case 2: System.out.println("Anda dapat membuat sandwich telur"); break;
+                    case 3: System.out.println("Anda dapat membuat telur rebus"); break;   
+                }
             
-        }else 
-            System.out.println("Mohon maad, Pilihan tidak ditemukan, "+ "tidak dapat memberikan saran resep");
-        
+        }else
+            System.out.println("Mohon maaf, Pilihan tidak ditemukan, "+ "tidak dapat memberikan saran resep");
             }
         }
-    }
-}
